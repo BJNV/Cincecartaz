@@ -254,86 +254,6 @@ Quando não há conexão a app mostra no topo do ecrã um icon para o utilizador
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <img width="25%" height="25%" src="https://github.com/ULHT-CM-2022-23/projeto-android-nativo-22004883-22007130/assets/79208390/f2bdc75d-ae15-4e29-b05e-9621b9fe3f1a.png">
 </p>
-
-
-## Descricão das classes de lógica de negócio:
-Classe MovieRoom:
-  - Atributos:
-    * title - String
-    * releasedDate - String
-    * duration - String
-    * genre - String
-    * poster - String
-    * plot - String
-    * imdbRating - String
-    * imdbVotes - String
-    * imdbID - String
-    * actors - String
-    * directors - String
-    * awards - String
-    * downloadedPoster - String
-    * cinemaID - String
-    * userRating - String
-    * userSeenDate - String
-    * userPhoto - List<String>
-    * userObservations - String
-    
-  - Métodos:
-    * getAllMoviesRegisteredByUser(movies: List<MovieRoom>): MutableList<Movie>
-    * getMoviesSortedByDate(movies: List<MovieRoom): MutableList<Movie>
-    * getMostSeenActorDirectorGenre(field: String,movies: List<MovieRoom): String
-    * limitTextSize(text:String?,size:Int) :String?
-    * getLastSeenMovie(movies: List<MovieRoom): Movie?
-    * getTotalDurationsOfMoviesSeenByUser(movies: List<MovieRoom) : String
-    * getTotalMoviesSeenByUser(movies: List<MovieRoom) : String
-    * getTitle(): String
-    * getRealesedDate(): String
-    * getDuration(): String
-    * getReleasedYear(): String
-    * getGenre(): String
-    * getPoster(): String
-    * getPlot(): String
-    * getImdbRating(): String
-    * getImdbVotes(): String
-    * getImdbID(): String
-    * getActors(): String
-    * getDirectors(): String
-    * getAwards(): String
-    * getCinemaID(): String
-    * getUserRating(): String
-    * getUserSeenDate(): String
-    * getUserPhoto(): List<String>?
-    * getUserObservations(): String
-    * getTitleYear(): String
-    * getOnlyYearReleaseDate(): String
-    * getCinema(): Cinema?
-    * getCinemaName(): String
-    * setCinemaID(cinemaID: String)
-    * setUserRating(rating: String)
-    * setUserSeenDate(seenDate: String)
-    * setUserPhoto(photos: List<String>)
-    * setUserObservations(observations: String)
-    * getRatingMarker(context: Context): String
-    
-    
-Classe Cinema:
-  - Atributos:
-    * id - String
-    * name - String
-    * provider - String
-    * latitude - String
-    * longitude - String
-    * address - String
-    * postcode - String
-    * county - String
-    
-  - Métodos:
-    * getIDByName(name: String): String
-    * getID(): String
-    * getName(): String
-    * getLatitude(): String
-    * getLongitude(): String
-    * readJsonFile(assets: AssetManager)
   
 ## Idiomas
   O idioma default é inglês, e os outros dois são portugês e espanhol, que irão ser utilizados caso o utilizador tenha o seu dispositivo em alguma destas duas linguas, se não irá ser utilizado o inglês.
@@ -373,10 +293,6 @@ Classe Cinema:
   
 ## Link do video do youtube
   - https://youtu.be/EHKzdiohXys
-  
-## Nota Prevista:
-  Resumindo o nosso projeto tem todas as funcionalidades pedidas no enunciado implementadas.
-  ### 19
   
 ## Alunos:
 
