@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bottomBackgroundColor"
+    tools:context=".fragments.dashboard.HomeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/wave"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="matrix"
+            android:src="@drawable/wave" />
+
+        <RelativeLayout
+            android:id="@+id/home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Last Seen Global Frame -->
+            <FrameLayout
+                android:id="@+id/last_seen_global_frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:paddingHorizontal="15dp">
+
+                <!-- Last Seen Global Card -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/last_seen_global_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    app:cardBackgroundColor="@color/white_card"
+                    app:cardCornerRadius="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/last_seen_movie"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </androidx.cardview.widget.CardView>
+
+            </FrameLayout>
+
+            <!-- Last Seen Film Frame -->
+            <FrameLayout
+                android:id="@+id/last_seen_film_frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/last_seen_global_frame"
+                android:paddingHorizontal="15dp">
+
+                <!-- Last Seen Layout -->
+                <LinearLayout
+                    android:id="@+id/last_seen_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="105dp"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <!-- Last Seen Poster Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:orientation="vertical">
+
+                        <!-- Last Seen Poster Card -->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/last_seen_card"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="8dp">
+
+                            <ImageView
+
+                                android:id="@+id/home_poster"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:scaleType="fitXY" />
+
+                        </androidx.cardview.widget.CardView>
+
+
+                    </LinearLayout>
+
+                    <!-- Last Seen Text Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8"
+                        android:orientation="vertical">
+
+                        <!-- Last Seen Text & Rating Card -->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/last_seen_poster_card"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_marginVertical="10dp"
+                            app:cardBackgroundColor="@color/white_card"
+                            app:cardCornerRadius="8dp">
+
+
+                            <!-- Last Seen Text % Rating Layout -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:paddingStart="8dp"
+                                android:paddingTop="4dp"
+                                android:weightSum="8">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="6"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/last_seen_title_year_view"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/black"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold"></TextView>
+
+                                    <TextView
+                                        android:id="@+id/last_seen_genre_view"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="12sp"></TextView>
+
+                                    <TextView
+                                        android:id="@+id/last_seen_directors_view"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="12sp"></TextView>
+
+                                    <TextView
+                                        android:id="@+id/last_seen_actors_view"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="12sp"></TextView>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2"
+                                    android:orientation="vertical"
+                                    android:weightSum="10">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="3">
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="5dp"
+                                        android:layout_weight="2"
+                                        android:orientation="horizontal"
+                                        android:weightSum="2">
+
+                                        <ImageView
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:scaleType="fitEnd"
+                                            android:src="@drawable/ic_rating"></ImageView>
+
+                                        <TextView
+                                            android:id="@+id/last_seen_imdbRating_view"
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:textSize="14sp"></TextView>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="3"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/last_seen_imdbVotes_view"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:textSize="10sp"></TextView>
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <!-- Last Seen Date & Cinema Frame -->
+            <FrameLayout
+                android:id="@+id/last_seen_date_cinema_frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/last_seen_film_frame"
+                android:paddingHorizontal="15dp">
+
+                <!-- Laste Seen Date & Cinema Layout -->
+                <LinearLayout
+                    android:id="@+id/last_seen_date_cinema_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <!-- Last Seen Date Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5"
+                        android:orientation="vertical">
+
+                        <!-- Last Seen Date Card -->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_marginVertical="10dp"
+                            app:cardBackgroundColor="@color/white_card"
+                            app:cardCornerRadius="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:id="@+id/last_seen_date_global"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal"
+                                    android:paddingTop="10dp"
+                                    android:text="@string/seen_on"
+                                    android:textColor="@color/black"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/last_seen_date_view"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_below="@id/last_seen_date_global"
+                                    android:gravity="center_horizontal"
+                                    android:paddingTop="5dp"
+                                    android:textSize="14sp" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <!-- Last Seen Cinema Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5"
+                        android:orientation="vertical">
+
+                        <!-- Last Seen Cinema Card -->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_marginVertical="10dp"
+                            app:cardBackgroundColor="@color/white_card"
+                            app:cardCornerRadius="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:id="@+id/last_seen_cinema_global"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal"
+                                    android:paddingTop="10dp"
+                                    android:text="@string/seen_at"
+                                    android:textColor="@color/black"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/last_seen_cinema_view"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_below="@id/last_seen_cinema_global"
+                                    android:gravity="center_horizontal"
+                                    android:paddingTop="5dp"
+                                    android:textSize="14sp" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <!-- Statistics Global Frame -->
+            <FrameLayout
+                android:id="@+id/statistics_global_frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/last_seen_date_cinema_frame"
+                android:layout_marginTop="20dp"
+                android:paddingHorizontal="15dp">
+
+                <!-- Last Seen Global Card -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/statistics_global_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    app:cardBackgroundColor="@color/white_card"
+                    app:cardCornerRadius="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/your_stats"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </androidx.cardview.widget.CardView>
+
+            </FrameLayout>
+
+            <!-- Genre & Time Frame -->
+            <FrameLayout
+                android:id="@+id/genre_time_frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/statistics_global_frame"
+                android:paddingHorizontal="15dp">
+
+                <!-- Genre & Total Movies Layout -->
+                <LinearLayout
+                    android:id="@+id/genre_time_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <!-- Genre Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5"
+                        android:orientation="vertical">
+
+                        <!-- Genre Card -->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_marginVertical="10dp"
+                            app:cardBackgroundColor="@color/white_card"
+                            app:cardCornerRadius="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:id="@+id/genre_global"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal"
+                                    android:paddingTop="10dp"
+                                    android:text="@string/most_seen_genre"
+                                    android:textColor="@color/black"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/most_seen_genre_view"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_below="@id/genre_global"
+                                    android:gravity="center_horizontal"
+                                    android:paddingTop="5dp"
+                                    android:textSize="14sp" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <!-- Time Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5"
+                        android:orientation="vertical">
+
+                        <!-- Time Card -->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_marginVertical="10dp"
+                            app:cardBackgroundColor="@color/white_card"
+                            app:cardCornerRadius="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:id="@+id/total_movies_global"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal"
+                                    android:paddingTop="10dp"
+                                    android:text="@string/total_movies_seen"
+                                    android:textColor="@color/black"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/total_movies_seen_by_user_view"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_below="@id/total_movies_global"
+                                    android:gravity="center_horizontal"
+                                    android:paddingTop="5dp"
+                                    android:textSize="14sp" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <!-- Actor & Director Frame -->
+            <FrameLayout
+                android:id="@+id/actor_director_frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/genre_time_frame"
+                android:paddingHorizontal="15dp">
+
+                <!-- Genre & Time Layout -->
+                <LinearLayout
+                    android:id="@+id/actor_director_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <!-- Actor Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5"
+                        android:orientation="vertical">
+
+                        <!-- Genre Card -->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_marginVertical="10dp"
+                            app:cardBackgroundColor="@color/white_card"
+                            app:cardCornerRadius="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:id="@+id/actor_global"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal"
+                                    android:paddingTop="10dp"
+                                    android:text="@string/most_watched_actor"
+                                    android:textColor="@color/black"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/most_watched_actor_view"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_below="@id/actor_global"
+                                    android:gravity="center_horizontal"
+                                    android:paddingTop="5dp"
+                                    android:textSize="14sp" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <!-- Director Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5"
+                        android:orientation="vertical">
+
+                        <!-- Time Card -->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_marginVertical="10dp"
+                            app:cardBackgroundColor="@color/white_card"
+                            app:cardCornerRadius="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:id="@+id/director_global"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal"
+                                    android:paddingTop="10dp"
+                                    android:text="@string/most_watched_director"
+                                    android:textColor="@color/black"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/most_watched_director_view"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_below="@id/director_global"
+                                    android:gravity="center_horizontal"
+                                    android:paddingTop="5dp"
+                                    android:textSize="14sp" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <!-- Cinema & Time Frame -->
+            <FrameLayout
+                android:id="@+id/cinema_frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/actor_director_frame"
+                android:paddingHorizontal="15dp">
+
+                <!-- Cinema &  Layout -->
+                <LinearLayout
+                    android:id="@+id/cinema_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <!-- Cinema Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5"
+                        android:orientation="vertical">
+
+                        <!-- Cinema Card -->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_marginVertical="10dp"
+                            app:cardBackgroundColor="@color/white_card"
+                            app:cardCornerRadius="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:id="@+id/cinema_global"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal"
+                                    android:paddingTop="10dp"
+                                    android:text="@string/cinema_mais_visitado"
+                                    android:textColor="@color/black"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/most_used_cinema_view"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_below="@id/cinema_global"
+                                    android:gravity="center_horizontal"
+                                    android:paddingTop="5dp"
+                                    android:textSize="14sp" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <!-- Time Layout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5"
+                        android:orientation="vertical">
+
+                        <!-- Time Card -->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_marginVertical="10dp"
+                            app:cardBackgroundColor="@color/white_card"
+                            app:cardCornerRadius="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:id="@+id/time_global"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal"
+                                    android:paddingTop="10dp"
+                                    android:text="@string/total_time_seen"
+                                    android:textColor="@color/black"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/total_duration_movies_seen_by_user_view"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_below="@id/time_global"
+                                    android:gravity="center_horizontal"
+                                    android:paddingTop="5dp"
+                                    android:textSize="14sp" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@id/cinema_frame">
+
+            </FrameLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/home_no_movies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingTop="100dp">
+
+            <TextView
+                android:id="@+id/home_no_movies_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/no_movies_seen"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/home_no_movies_text"
+                android:text="@string/information_will_be_showed_when_you_register_movies"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:gravity="center"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

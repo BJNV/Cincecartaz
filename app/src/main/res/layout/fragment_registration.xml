@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bottomBackgroundColor"
+    tools:context=".fragments.register.RegistrationFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/wave"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="matrix"
+            android:src="@drawable/wave" />
+
+        <!-- Film Name Frame -->
+        <FrameLayout
+            android:id="@+id/film_name_frame"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginTop="50dp"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="5dp">
+
+            <!-- Film Name Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/film_name_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/white_card"
+                app:cardCornerRadius="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/film_name_icon_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingStart="10dp"
+                        android:src="@drawable/ic_film_name" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/film_name_registration"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="45dp"
+                        android:gravity="center_vertical"
+                        android:hint="@string/movie_name" />
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+        </FrameLayout>
+
+        <!-- Cinema Name Frame -->
+        <FrameLayout
+            android:id="@+id/cinema_name_frame"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_below="@id/film_name_frame"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="5dp">
+
+            <!-- Cinema Name -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cinema_name_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/white_card"
+                app:cardCornerRadius="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingStart="10dp"
+                        android:src="@drawable/ic_cinema_name" />
+
+                    <Spinner
+                        android:id="@+id/cinema_name_registration"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="45dp"
+                        android:gravity="center_vertical"
+                        android:text="NOME CINEMA" />
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+        </FrameLayout>
+
+        <!-- Rating Frame -->
+        <FrameLayout
+            android:id="@+id/rating_frame"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_below="@id/cinema_name_frame"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="5dp">
+
+            <!-- Rating Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/rating_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/white_card"
+                app:cardCornerRadius="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingStart="10dp"
+                        android:src="@drawable/ic_rating_black" />
+
+                    <EditText
+                        android:id="@+id/rating_registration"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="45dp"
+                        android:gravity="center_vertical"
+                        android:hint="1-10"
+                        android:inputType="numberDecimal" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </FrameLayout>
+
+        <!-- Seen Date Frame -->
+        <FrameLayout
+            android:id="@+id/seen_date_frame"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_below="@id/rating_frame"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="5dp">
+
+            <!-- Seen Date Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/seen_date_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/white_card"
+                app:cardCornerRadius="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingStart="10dp"
+                        android:src="@drawable/ic_date" />
+
+                    <TextView
+                        android:id="@+id/date_seen_registration"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="45dp"
+                        android:gravity="center_vertical" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </FrameLayout>
+
+        <!-- Photos Frame -->
+        <FrameLayout
+            android:id="@+id/photos_frame"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_below="@id/seen_date_frame"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="5dp">
+
+            <!-- Photos Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/photos_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/white_card"
+                app:cardCornerRadius="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingStart="10dp"
+                        android:src="@drawable/ic_gallery" />
+
+                    <TextView
+                        android:id="@+id/photos_registration"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="45dp"
+                        android:gravity="center_vertical"
+                        android:hint="0 Fotografias Selecionadas" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </FrameLayout>
+
+        <!-- Observations Frame -->
+        <FrameLayout
+            android:id="@+id/observations_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/photos_frame"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="5dp">
+
+            <!-- Observations Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/observations_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/white_card"
+                app:cardCornerRadius="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingStart="10dp"
+                        android:src="@drawable/ic_observations" />
+
+                    <EditText
+                        android:id="@+id/observations_registration"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="45dp"
+                        android:gravity="center_vertical"
+                        android:hint="@string/comments"
+                        android:maxLength="200" />
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+        </FrameLayout>
+
+        <!-- Button Frame -->
+        <FrameLayout
+            android:id="@+id/button_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/observations_frame"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/registration_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/registration" />
+
+            </RelativeLayout>
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

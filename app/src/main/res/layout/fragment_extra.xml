@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bottomBackgroundColor"
+    android:orientation="vertical"
+    tools:context=".fragments.morePages.ExtraFragment">
+
+<!--    <ImageView-->
+<!--        android:id="@+id/wave"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:scaleType="matrix"-->
+<!--        android:src="@drawable/wave" />-->
+
+    <LinearLayout
+        android:id="@+id/search_bar_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <FrameLayout
+            android:id="@+id/search_bar_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="15dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white_card"
+                app:cardCornerRadius="12dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/search_bar_ic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_search" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/search_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toEndOf="@id/search_bar_ic"
+                        android:hint="@string/search"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@color/black" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/search_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search_bar_linear_layout"
+        android:layout_centerInParent="true"
+        android:text="@string/search"
+        android:layout_marginTop="10dp"/>
+
+<!--    <FrameLayout-->
+<!--        android:id="@+id/movie_Frame"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/search_button"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:layout_marginTop="100dp">-->
+
+<!--        <RelativeLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content">-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/poster_view"-->
+<!--                android:layout_width="150dp"-->
+<!--                android:layout_height="150dp" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/title_year_view"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@+id/poster_view"-->
+<!--                android:text="Carros (2008)"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="20sp"-->
+<!--                android:textStyle="bold" />-->
+<!--        </RelativeLayout>-->
+<!--    </FrameLayout>-->
+
+    <LinearLayout
+        android:id="@+id/movie_details_layout"
+        android:layout_below="@id/search_button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".fragments.moviesList.MovieDetailViewFragment">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:nestedScrollingEnabled="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Image Frame -->
+                <FrameLayout
+                    android:id="@+id/image_frame"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/poster_view"
+                        android:layout_width="150dp"
+                        android:layout_height="200dp"
+                        android:scaleType="fitXY" />
+
+                </FrameLayout>
+
+                <!-- Frame Direita Imagem -->
+                <FrameLayout
+                    android:id="@+id/right_image_frame"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_toEndOf="@id/image_frame"
+                    android:paddingTop="20dp"
+                    android:paddingEnd="10dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_right_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toEndOf="@id/image_frame"
+                        app:cardBackgroundColor="@color/white_bigger_card"
+                        app:cardCornerRadius="8dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <!-- Title Frame -->
+                            <FrameLayout
+                                android:id="@+id/title_frame"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:paddingHorizontal="15dp"
+                                android:paddingTop="15dp"
+                                android:paddingBottom="5dp">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    app:cardBackgroundColor="@color/white_card"
+                                    app:cardCornerRadius="8dp">
+
+
+                                    <TextView
+                                        android:id="@+id/title_view"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:paddingStart="10dp"
+                                        android:paddingEnd="10dp"
+                                        android:text="Cars"
+                                        android:textColor="@color/black"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+
+                                </androidx.cardview.widget.CardView>
+
+                            </FrameLayout>
+
+                            <!-- Released Date Frame -->
+                            <FrameLayout
+                                android:id="@+id/released_date_frame"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/title_frame"
+                                android:paddingHorizontal="15dp"
+                                android:paddingVertical="5dp">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:cardBackgroundColor="@color/white_card"
+                                    app:cardCornerRadius="8dp">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <TextView
+                                            android:id="@+id/released_date_view"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:paddingHorizontal="10dp"
+                                            android:text="2006/06/09"
+                                            android:textColor="@color/black" />
+
+                                    </RelativeLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                            </FrameLayout>
+
+                            <!-- Duration Frame -->
+                            <FrameLayout
+                                android:id="@+id/duration_frame"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/released_date_frame"
+                                android:paddingHorizontal="15dp"
+                                android:paddingVertical="5dp">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:cardBackgroundColor="@color/white_card"
+                                    app:cardCornerRadius="8dp">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <TextView
+                                            android:id="@+id/duration_view"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:paddingHorizontal="10dp"
+                                            android:text="1h 57m"
+                                            android:textColor="@color/black" />
+
+                                    </RelativeLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                            </FrameLayout>
+
+                            <!-- Rating Frame -->
+                            <FrameLayout
+                                android:id="@+id/rating_frame"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/duration_frame"
+                                android:paddingHorizontal="15dp"
+                                android:paddingVertical="5dp">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:cardBackgroundColor="@color/white_card"
+                                    app:cardCornerRadius="8dp">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <ImageView
+                                            android:id="@+id/ic_star_global"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:paddingStart="5dp"
+                                            android:src="@drawable/ic_rating"></ImageView>
+
+                                        <TextView
+                                            android:id="@+id/rating_view"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_toEndOf="@id/ic_star_global"
+                                            android:paddingStart="5dp"
+                                            android:paddingEnd="10dp"
+                                            android:text="7.2/10"
+                                            android:textColor="@color/black" />
+
+                                    </RelativeLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                            </FrameLayout>
+
+                            <!-- Votes Frame -->
+                            <FrameLayout
+                                android:id="@+id/votes_frame"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/rating_frame"
+                                android:paddingHorizontal="15dp"
+                                android:paddingTop="5dp">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:cardBackgroundColor="@color/white_card"
+                                    app:cardCornerRadius="8dp">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <TextView
+                                            android:id="@+id/votes_view"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:paddingHorizontal="10dp"
+                                            android:text="431,323"
+                                            android:textColor="@color/black" />
+
+                                    </RelativeLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                            </FrameLayout>
+
+                        </RelativeLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                </FrameLayout>
+
+                <!-- Genre1 Frame -->
+                <FrameLayout
+                    android:id="@+id/genre1_frame"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_frame"
+                    android:layout_toLeftOf="@id/genre2_frame"
+                    android:paddingHorizontal="15dp"
+                    android:paddingVertical="5dp"
+                    android:visibility="visible">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/white_card"
+                        app:cardCornerRadius="8dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/genre1_view"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingHorizontal="10dp"
+                                android:text="Animation"
+                                android:textColor="@color/black" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </FrameLayout>
+
+                <!-- Genre2 Frame -->
+                <FrameLayout
+                    android:id="@+id/genre2_frame"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_frame"
+                    android:layout_centerHorizontal="true"
+                    android:paddingHorizontal="15dp"
+                    android:paddingVertical="5dp"
+                    android:visibility="visible">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/white_card"
+                        app:cardCornerRadius="8dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/genre2_view"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingHorizontal="10dp"
+                                android:text="Adventure"
+                                android:textColor="@color/black" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </FrameLayout>
+
+                <!-- Genre3 Frame -->
+                <FrameLayout
+                    android:id="@+id/genre3_frame"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_frame"
+                    android:layout_toRightOf="@id/genre2_frame"
+                    android:paddingHorizontal="15dp"
+                    android:paddingVertical="5dp"
+                    android:visibility="visible">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/white_card"
+                        app:cardCornerRadius="8dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/genre3_view"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingHorizontal="10dp"
+                                android:text="Comedy"
+                                android:textColor="@color/black" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </FrameLayout>
+
+                <!-- Plot Frame -->
+                <FrameLayout
+                    android:id="@+id/plot_frame"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/genre2_frame"
+                    android:paddingHorizontal="15dp"
+                    android:paddingTop="5dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/white_card"
+                        app:cardCornerRadius="8dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/plot_view"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:text="On the way to the biggest race of his life, a hotshot rookie race car gets stranded in a rundown town, and learns that winning isn't everything in life."
+                                android:textColor="@color/black" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </FrameLayout>
+
+                <!-- Director Frame -->
+                <FrameLayout
+                    android:id="@+id/director_frame"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/plot_frame"
+                    android:paddingHorizontal="15dp"
+                    android:paddingTop="5dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/white_card"
+                        app:cardCornerRadius="8dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/director_global"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingVertical="5dp"
+                                android:paddingStart="5dp"
+                                android:text="@string/directors"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/director_view"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/director_global"
+                                android:paddingVertical="5dp"
+                                android:paddingEnd="5dp"
+                                android:text="John Lasseter, Joe Ranft"
+                                android:textColor="@color/black" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </FrameLayout>
+
+                <!-- Actor Frame -->
+                <FrameLayout
+                    android:id="@+id/actor_frame"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/director_frame"
+                    android:paddingHorizontal="15dp"
+                    android:paddingTop="5dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/white_card"
+                        app:cardCornerRadius="8dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/actor_global"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingVertical="5dp"
+                                android:paddingStart="5dp"
+                                android:text="@string/actors"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/actor_view"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/actor_global"
+                                android:paddingVertical="5dp"
+                                android:paddingEnd="5dp"
+                                android:text="Owen Wilson, Bonnie Hunt, Paul Newman"
+                                android:textColor="@color/black" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </FrameLayout>
+
+                <!-- Award Frame -->
+                <FrameLayout
+                    android:id="@+id/award_frame"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/actor_frame"
+                    android:paddingHorizontal="15dp"
+                    android:paddingTop="5dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/white_card"
+                        app:cardCornerRadius="8dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/award_global"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingVertical="5dp"
+                                android:paddingStart="5dp"
+                                android:text="@string/awards"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/award_view"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/award_global"
+                                android:paddingVertical="5dp"
+                                android:paddingEnd="5dp"
+                                android:text="Nominated for 2 Oscars. 28 wins and 34 nominations total"
+                                android:textColor="@color/black" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </FrameLayout>
+
+                <!-- Link Frame -->
+                <FrameLayout
+                    android:id="@+id/link_frame"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/award_frame"
+                    android:paddingHorizontal="15dp"
+                    android:paddingTop="5dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/white_card"
+                        app:cardCornerRadius="8dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/link_view"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:autoLink="web"
+                                android:linksClickable="true"
+                                android:paddingHorizontal="5dp"
+                                android:paddingVertical="5dp"
+                                android:text="https://www.imdb.com/title/tt0317219"
+                                android:textColorLink="@color/blue"
+                                tools:ignore="TouchTargetSizeCheck" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:id="@+id/space_between_link_and_ytPlayer"
+                    android:layout_below="@id/link_frame"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"/>
+
+
+                <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                    android:id="@+id/yt_screen"
+                    android:layout_below="@id/space_between_link_and_ytPlayer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:enableAutomaticInitialization="true"/>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_below="@id/yt_screen"/>
+
+
+            </RelativeLayout>
+
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>

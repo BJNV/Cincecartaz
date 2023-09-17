@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/home"
+        android:title="@string/home"
+        android:icon="@drawable/ic_home"
+        android:checked="false"/>
+
+    <item android:id="@+id/movies"
+        android:title="@string/movies"
+        android:icon="@drawable/ic_history" />
+
+    <item
+        android:id="@+id/palce_holder"
+        android:title="" />
+
+    <item android:id="@+id/more_pages"
+        android:title="@string/morepages"
+        android:icon="@drawable/ic_more" />
+
+    <item android:id="@+id/registration"
+        android:title="@string/registration"
+        android:icon="@drawable/ic_registration" />
+</menu>

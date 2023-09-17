@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Cinemas">
+        <item>Fórum Montijo</item>
+        <item>Cinema Ideal</item>
+        <item>Cinema City Campo Pequeno</item>
+        <item>El Corte Inglês</item>
+        <item>Cinemas NOS Centro Comercial Colombo</item>
+        <item>Cinemas NOS Alvaláxia</item>
+        <item>Cinema São Jorge</item>
+        <item>Cinema do Parque</item>
+        <item>UCI Cinemas Ubbo</item>
+        <item>Cinema City Alegro Alfragide</item>
+        <item>Cinema City Almada Forum</item>
+    </string-array>
+</resources>

@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name" translatable="false">Cinecartaz</string>
+    <string name="movies">Movies</string>
+    <string name="home" translatable="false">Home</string>
+    <string name="registration">Register</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="genre">Genre</string>
+    <string name="imdb" translatable="false">IMDB</string>
+    <string name="youtube_api_key" translatable="false">AIzaSyBhdFvtHtkIWV6fHO6k85uoP03HS6ohGnU</string>
+    <string name="selected_photos">Selected Photos</string>
+    <string name="invalid_title">Invalid Title</string>
+    <string name="invalid_rate">Invalid Rate</string>
+    <string name="invalid_date">Invalid Date</string>
+    <string name="registration_success">Registration done successefully</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="close_app">Close App?</string>
+    <string name="sure_close_app">Are you sure you want to close the app?</string>
+    <string name="time">Time</string>
+    <string name="search">Search</string>
+    <string name="last_seen_movie">Last Movie Seen</string>
+    <string name="seen_on">Seen on</string>
+    <string name="seen_at">Seen at</string>
+    <string name="your_stats">Your stats</string>
+    <string name="most_seen_genre">Most seen genre</string>
+    <string name="total_time_seen">Total time seen</string>
+    <string name="most_watched_actor">Most watched actor</string>
+    <string name="most_watched_director">Most watched director</string>
+    <string name="cinema_mais_visitado">Most visited cinema</string>
+    <string name="go_to_extra_bttn_text">Go to Extra</string>
+    <string name="directors">Directors -</string>
+    <string name="actors">Actors -</string>
+    <string name="user_experience">User Experience</string>
+    <string name="cinema">Cinema -</string>
+    <string name="seen_in">Seen In -</string>
+    <string name="awards">Awards -</string>
+    <string name="movie_name">Movie Name</string>
+    <string name="comments">Comments</string>
+    <string name="shearch_by_voice">Search for a movie by voice</string>
+    <string name="morepages">MorePages</string>
+    <string name="total_movies_seen">Total Movies Seen</string>
+    <string name="go_to_map">GO TO MAP</string>
+    <string name="Reset_btn">RESET</string>
+    <string name="go">GO</string>
+    <string name="listening">Listening...</string>
+    <string name="very_weak">Very Weak</string>
+    <string name="weak">Weak</string>
+    <string name="medium">Medium</string>
+    <string name="good">Good</string>
+    <string name="excellent">Excellent</string>
+    <string name="reset">Reset...</string>
+    <string name="more">More</string>
+    <string name="hide">Hide</string>
+    <string name="no_movies_seen">No Movies Seen</string>
+    <string name="information_will_be_showed_when_you_register_movies">Information will be shown when you register movies</string>
+    <string name="gallery_access_denied">Permission Denied</string>
+    <string name="mic_movie_not_found">Movie not found</string>
+</resources>
